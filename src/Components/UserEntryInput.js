@@ -25,7 +25,7 @@ function UserEntryForm(props) {
 		if (userAge.trim().length === 0 && userName.trim().length === 0) {
 			props.validityCheck('missing input');
 			return;
-		} else if (userAge < 0) {
+		} else if (userAge <= 0) {
 			props.validityCheck('negative age');
 			return;
 		}

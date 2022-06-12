@@ -3,6 +3,7 @@ import "./App.css";
 
 import UserEntryForm from "./Components/UserEntryInput";
 import UserEntryList from "./Components/UserEntryList";
+import Modal from "./Components/Modal/Modal";
 
 function App() {
 	const [users, setUsers] = useState([]);
@@ -24,6 +25,7 @@ function App() {
 			<section>
 				<UserEntryList listedUsers={users} />
 			</section>
+			<Modal validityType={validity} />
 		</div>
 	);
 }
