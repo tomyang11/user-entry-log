@@ -7,12 +7,10 @@ function UserEntryForm(props) {
 	const [userAge, setUserAge] = useState("");
 
 	function inputNameHandler(event) {
-		//console.log(event.target.value);
 		setUserName(event.target.value);
 	}
 
 	function inputAgeHandler(event) {
-		//console.log(event.target.value);
 		setUserAge(event.target.value);
 	}
 
@@ -23,6 +21,14 @@ function UserEntryForm(props) {
 			name: userName,
 			age: userAge,
 		};
+
+		if (userAge.trim().length === 0 && userName.trim().length === 0) {
+			props.validityCheck('missing input');
+			return;
+		} else if (userAge < 0) {
+			props.validityCheck('negative age');
+			return;
+		}
 
 		props.onAddUser(entryInfo);
 		console.log(entryInfo);

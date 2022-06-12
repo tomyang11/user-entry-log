@@ -6,6 +6,7 @@ import UserEntryList from "./Components/UserEntryList";
 
 function App() {
 	const [users, setUsers] = useState([]);
+	const [validity, setValidity] = useState('normal');
 
 	function addUserHandler(enteredUser) {
 		setUsers((prevUsers) => {
@@ -18,7 +19,7 @@ function App() {
 	return (
 		<div className='App'>
 			<section>
-				<UserEntryForm onAddUser={addUserHandler} />
+				<UserEntryForm validityCheck={setValidity} onAddUser={addUserHandler} />
 			</section>
 			<section>
 				<UserEntryList listedUsers={users} />
