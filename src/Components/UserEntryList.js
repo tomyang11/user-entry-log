@@ -4,7 +4,7 @@ import UserEntryItem from "./UserEntryItem";
 
 function EntryUserList(props) {
 	let usersList = props.listedUsers.map((user) => (
-		<UserEntryItem key={user.id} id={user.id}>
+		<UserEntryItem key={Math.random().toString()}>
 			{user.name}
 			{user.age}
 		</UserEntryItem>
