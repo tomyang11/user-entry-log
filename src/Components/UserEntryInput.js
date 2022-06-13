@@ -39,10 +39,12 @@ function UserEntryForm(props) {
 
 	return (
 		<form onSubmit={submitHandler}>
-			<label>Username</label>
-			<input type="text" value={userName} onChange={inputNameHandler} />
-			<label>Age (Years)</label>
-			<input type="text" value={userAge} onChange={inputAgeHandler} />
+			<div className='form-control'>
+				<label>Username</label>
+				<input type="text" value={userName} onChange={inputNameHandler} />
+				<label>Age (Years)</label>
+				<input type="text" value={userAge} onChange={inputAgeHandler} />
+			</div>
 			<button type="submit">Add User</button>
 		</form>
 	);

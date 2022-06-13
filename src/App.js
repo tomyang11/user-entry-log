@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import "./App.css";
+import styles from "./App.module.css";
 
 import UserEntryForm from "./Components/UserEntryInput";
 import UserEntryList from "./Components/UserEntryList";
@@ -17,15 +17,19 @@ function App() {
 		});
 	}
 
+	function closeModal() {
+		setValidity('normal');
+	}
+
 	return (
-		<div className='App'>
-			<section>
+		<div className={styles.App}>
+			<section className={styles.Form}>
 				<UserEntryForm validityCheck={setValidity} onAddUser={addUserHandler} />
 			</section>
-			<section>
+			<section className={`${styles.Output} ${users.length === 0 && styles.none}`}>
 				<UserEntryList listedUsers={users} />
 			</section>
-			<Modal validityType={validity} />
+			<Modal onClose={closeModal} validityType={validity} />
 		</div>
 	);
 }

@@ -1,5 +1,10 @@
-.form {
-    background-color: white;
-    
+.form-control {
+    display: flex;
+}
 
+.form-control label {
+    color: black;
+    font-weight: 700;
+    font-size: 20px;
+    margin: 5px;
 }

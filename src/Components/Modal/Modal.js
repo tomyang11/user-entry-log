@@ -14,16 +14,16 @@ function Modal(props) {
         return null;
     } else if (props.validityType === 'missing input' || props.validityType === 'negative age') {
         return (
-            <div className="modal">
-                <div className="modal-content">
+            <div className="modal" onClick={props.onClose}>
+                <div className="modal-content" onClick={e => e.stopPropagation()}>
                     <div className="modal-header">
-                        <h4 className="modal-title">Modal title</h4>
+                        <h4 className="modal-title">Invalid Input</h4>
                     </div>
                     <div className="modal-body">
                         {modalContent}
                     </div>
                     <div className="modal-footer">
-                        <button className="button">Close</button>
+                        <button className="button" onClick={props.onClose}>Okay</button>
                     </div>
                 </div>
             </div>
