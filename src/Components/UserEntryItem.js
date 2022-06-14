@@ -1,7 +1,9 @@
 import React from 'react';
 
+import './UserEntryItem.css';
+
 function UserEntryItem(props) {
-    return <li>
+    return <li className='item'>
         {props.children}
     </li>
 }

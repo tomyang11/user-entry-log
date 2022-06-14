@@ -6,29 +6,17 @@
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
-  color: white;
 }
 
 .Form {
-  background-color: white;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column; /* Don't this does anything */
-  color: black;
   width: 600px;
   height: 200px;
-  border-radius: 10px;
 }
 
 .Output {
-  display: flex;
-  align-items: center;
-  justify-content: center;
   background-color: white;
-  color: black;
   border-radius: 10px;
-  margin: 30px;
+  margin-top: 25px;
   width: 600px;
 }
 

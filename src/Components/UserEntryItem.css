@@ -1,0 +1,7 @@
+.item {
+    border: 1px solid grey;
+    padding: 5px;
+    margin-top: 5px;
+    font-size: 12px;
+    width: 100%;
+}

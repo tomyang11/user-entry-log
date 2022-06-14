@@ -44,8 +44,8 @@ function UserEntryForm(props) {
 				<input type="text" value={userName} onChange={inputNameHandler} />
 				<label>Age (Years)</label>
 				<input type="text" value={userAge} onChange={inputAgeHandler} />
+				<button type="submit">Add User</button>
 			</div>
-			<button type="submit">Add User</button>
 		</form>
 	);
 }

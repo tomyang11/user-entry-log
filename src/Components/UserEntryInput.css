@@ -1,10 +1,47 @@
 .form-control {
+    flex-direction: column;
+    background-color: white;
     display: flex;
+    align-items: left;
+    justify-content: center;
+    border-radius: 10px;
 }
 
 .form-control label {
     color: black;
     font-weight: 700;
     font-size: 20px;
-    margin: 5px;
+    margin-left: 10px;
+    margin-top: 5px;
+}
+
+.form-control input {
+    display: block;
+    width: 90%;
+    border: 1px solid rgb(138, 129, 129);
+    margin-bottom: 10px;
+    margin-top: 10px;
+    margin-left: 10px;
+}
+
+.form-control button {
+    font: inherit;
+    font-size: 20px;
+    padding: 0.5rem 1.5rem;
+    border: 1px solid #8b005d;
+    color: white;
+    background: #8b005d;
+    box-shadow: 0 0 4px rgba(0, 0, 0, 0.26);
+    cursor: pointer;
+    max-width: 150px;
+    max-height: 60px;
+    float: left;
+    margin: 10px;
+}
+
+.form-control button:hover,
+.button:active {
+    background: #ac0e77;
+    border-color: #ac0e77;
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.26);
 }
